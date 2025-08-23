@@ -1,0 +1,6 @@
+---
+hide:
+  - footer
+---
+
+# Understanding Readings

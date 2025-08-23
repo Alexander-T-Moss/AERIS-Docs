@@ -1,5 +1,40 @@
 site_name: Aeris Docs
 site_url: https://aeris-docs.xyz
 
+repo_url: https://github.com/Alexander-T-Moss/Aeris
+repo_name: Aeris - GitHub
+
 theme:
   name: material
+  icon:
+    logo: octicons/cloud-16
+  palette:
+    scheme: default1
+    primary: light blue 
+  features:
+    - navigation.footer
+
+nav:
+  - Welcome: 'index.md'
+  - Overview: 'overview.md'
+  - Releases: https://github.com/Alexander-T-Moss/Aeris/releases
+  - Freq. Asked Questions: 'faq.md'
+  - Assembly Guide: 'assembly-guide.md'
+  - Understanding Readings: 'understanding-readings.md'
+  - Alternatives: 'alternatives.md'
+  - Contact: 'contact.md'
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      
+extra:
+  social:
+    - icon: simple/printables
+      link: https://www.printables.com/@AlexanderT_Moss
+    - icon: simple/bambulab
+      link: https://makerworld.com/en/@AlexanderT_Moss
+    - icon: simple/github
+      link: https://github.com/Alexander-T-Moss
