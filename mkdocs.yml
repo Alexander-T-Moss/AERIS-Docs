@@ -43,6 +43,9 @@ nav:
   - Alternatives: 'alternatives.md'
   - Contact: 'contact.md'
 
+not_in_nav: 
+  mkdocs-references.md
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
