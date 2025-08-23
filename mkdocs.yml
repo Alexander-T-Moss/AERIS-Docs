@@ -1,8 +1,21 @@
 site_name: Aeris Docs
 site_url: https://aeris-docs.xyz
+site_description: Documentation resources for Aeris
+site_author: Alexander Þór
+
+copyright: Open Source Under GNU/GPL 3.0
 
 repo_url: https://github.com/Alexander-T-Moss/Aeris
 repo_name: Aeris - GitHub
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+watch:
+  - includes
 
 theme:
   name: material
@@ -13,8 +26,15 @@ theme:
     primary: light blue 
   features:
     - navigation.footer
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+
+draft_docs: |
+  mkdocs-references.md
 
 nav:
+  - MKDocs References: 'mkdocs-references.md'
   - Welcome: 'index.md'
   - Overview: 'overview.md'
   - Releases: https://github.com/Alexander-T-Moss/Aeris/releases
@@ -25,11 +45,41 @@ nav:
   - Contact: 'contact.md'
 
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+            - includes/abbreviations.md
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+  - md_in_html
   - attr_list
+  - tables
+  - abbr
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.blocks.caption
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      
+
 extra:
   social:
     - icon: simple/printables
@@ -38,3 +88,21 @@ extra:
       link: https://makerworld.com/en/@AlexanderT_Moss
     - icon: simple/github
       link: https://github.com/Alexander-T-Moss
+  status:
+    Draft: Draft
+
+plugins:
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: auto
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
