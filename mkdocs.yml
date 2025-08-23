@@ -34,7 +34,6 @@ draft_docs: |
   mkdocs-references.md
 
 nav:
-  - MKDocs References: 'mkdocs-references.md'
   - Welcome: 'index.md'
   - Overview: 'overview.md'
   - Releases: https://github.com/Alexander-T-Moss/Aeris/releases
