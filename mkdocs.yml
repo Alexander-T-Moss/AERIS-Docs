@@ -1,0 +1,5 @@
+site_name: Aeris Docs
+site_url: https://aeris-docs.xyz
+
+theme:
+  name: material
