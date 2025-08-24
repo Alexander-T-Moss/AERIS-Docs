@@ -1,7 +1,6 @@
 ---
 hide:
   - footer
-  - navigation
 ---
 
-# Contact
+# Software Configuration

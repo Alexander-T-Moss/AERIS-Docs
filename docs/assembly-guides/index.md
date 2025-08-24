@@ -3,4 +3,4 @@ hide:
   - footer
 ---
 
-# Assembly Guide
+# Assembly Guides

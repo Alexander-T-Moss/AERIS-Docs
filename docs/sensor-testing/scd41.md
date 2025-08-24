@@ -1,7 +1,6 @@
 ---
 hide:
   - footer
-  - navigation
 ---
 
-# Contact
+# Sensirion SEN41

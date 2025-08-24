@@ -22,26 +22,73 @@ theme:
   icon:
     logo: octicons/cloud-16
   palette:
-    scheme: default1
-    primary: light blue 
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
   features:
     - navigation.footer
     - content.code.copy
     - content.tabs.link
     - content.tooltips
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
 
 draft_docs: |
   mkdocs-references.md
 
 nav:
-  - Welcome: 'index.md'
-  - Overview: 'overview.md'
+  - Welcome: index.md
+  - Assembly Guides:
+    - assembly-guides/index.md
+    - AERIS: assembly-guides/aeris.md
+    - AERIS Nano: assembly-guides/aeris-nano.md
+  - Software Configuration:
+    - software-config/index.md
+    - ESPHome: software-config/esphome.md
+    - Standalone (Local Web App): software-config/standalone.md
+    - Zigbee Router: software-config/zigbee-router.md 
+  - Freq. Asked Questions: faq.md
+  - Understanding Readings:
+    - readings/index.md
+    - Temperature: readings/temperature.md
+    - Humidity: readings/humidity.md
+    - Particulate Matter: readings/pm.md
+    - VOCs: readings/vocs.md
+    - Nitrogen Oxide: readings/nox.md
+    - Carbon Dioxide: readings/co2.md
+
+  - Sensor Testing:
+    - sensor-testing/index.md
+    - SEN55: sensor-testing/sen55.md
+    - SCD41: sensor-testing/scd41.md
+    - BME280: sensor-testing/bme280.md
+  - Alternatives: alternatives.md
   - Releases: https://github.com/Alexander-T-Moss/Aeris/releases
-  - Freq. Asked Questions: 'faq.md'
-  - Assembly Guide: 'assembly-guide.md'
-  - Understanding Readings: 'understanding-readings.md'
-  - Alternatives: 'alternatives.md'
-  - Contact: 'contact.md'
+  - Contact: contact.md
 
 not_in_nav: 
   mkdocs-references.md
@@ -108,3 +155,4 @@ plugins:
       background: white
       shadow: true
       manual: false
+  - search

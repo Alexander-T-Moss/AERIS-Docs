@@ -1,6 +1,8 @@
 ---
 hide:
   - footer
+  - navigation
+  - toc
 ---
 
 # Welcome to Aeris Documentation
